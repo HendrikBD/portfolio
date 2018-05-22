@@ -1,0 +1,298 @@
+#bhd {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  margin: 0 0 0 30px;
+}
+
+.nav-item .nav-link {
+  font-size: 18px;
+  margin: 0 8px;
+}
+
+.nav-item:nth-child(3) {
+  margin: 0 35px 0 0;
+}
+
+#mainCont >div {
+  margin:auto;
+}
+
+#intro {
+  background-color: #336B87;
+  margin:auto;
+}
+
+#bhd-thumb {
+  border-radius: 50%;
+  border: 2px solid #2A3132;
+  width: 100%;
+  max-width: 300px;
+}
+
+#header {
+  margin: 50px 0 50px 0;
+  text-align: center;
+}
+
+#codeSym {
+  font-size: 40px;
+  background-color: #336B87;
+  padding: 0 10px;
+  color: #2A3132;
+  font-weight: bold;
+}
+
+.hr {
+  width: 95%; 
+  height: 22px; 
+  border-bottom: 2px solid #2A3132; 
+  text-align: center;
+  margin: 45px 0 50px 0;
+}
+
+h3 {
+  border
+  line-height: 0.01em;
+}
+
+
+span {
+  padding: 0 20px;
+  margin-top: -25px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cardCont {
+  margin: 5px 0 15px 0;
+}
+
+.cardCont> .card {
+  overflow:hidden;
+}
+
+.row .col-md-8 {
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+#port {
+  background-color: #763626;
+  background-color: #2A3132;
+  padding: 35px 35px;
+  margin: auto;
+}
+
+#contact {
+  background-color: #336B87;
+  padding: 35px 25px;
+  margin: auto;
+}
+
+#contact > div:nth-child(2) {
+  font-size: 110%;
+}
+
+body {
+  background-color: #90AFC5;
+  position: relative;
+  font-family: 'Merriweather', serif;
+  color: #edeae3;
+  font-size: 110%;
+}
+
+.navbar.navbar-expand-lg {
+  background-color: #2A3132;
+  border-bottom: #2A3132 1px solid;
+}
+
+#footer {
+  background-color: #2A3132;
+  color: white;
+  width: 100%;
+}
+
+#footText {
+  margin: 0 auto;
+  text-align: center;
+  margin: 80px auto 30px auto;
+}
+
+#footText > div:nth-child(1) > div:nth-child(1) {
+  margin-bottom: 40px;
+}
+
+
+
+#footer div.container {
+  text-align: center;
+}
+
+div.icon {
+  font-size: 25px;
+  color: white;
+}
+
+#introJump {
+  padding-top: 60px;
+  margin-top: -60px;
+}
+
+#portJump {
+  padding-top:25px;
+  /* padding-top: 100px; */
+  /* margin-top: -90px; */
+  margin-bottom: 30px;
+}
+
+#contactJump {
+  padding-top: 100px;
+  margin-top: -90px;
+  margin-bottom: 40px;
+}
+
+form input.form-control {
+  margin-bottom: 5px;
+}
+
+div button.btn {
+  text-align: center;
+  margin: 30px auto;
+  background-color: #763626;;
+  border-color: #763626;
+}
+
+form.form-control div {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#contact div:nth-child(2) {
+  padding: 0 30px;
+}
+
+#contact h1.text-center {
+  padding-bottom: 30px;
+}
+
+#footer #footText a{
+  color: #edeae3;
+  font-size: 120%;
+}
+
+#footer h5 {
+  padding-bottom: 7px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2.75rem;
+}
+
+
+.portImg {
+  width: 100%;
+  padding: 2px;
+  border-radius: 0.25rem;
+  border: 1px solid #0000004d;
+  opacity: 1;
+  transition: opacity 0.5s 0.2s;
+}
+
+
+
+
+
+
+
+
+.cardCont:hover .portTitle {
+  opacity: 1;
+
+}
+
+
+
+.cardCont:hover .portImg{
+  opacity: 0.4;
+  transition: opacity 0.4s;
+}
+
+.cardCont:hover {
+  cursor: pointer;
+}
+
+.portTitle {
+  position: absolute;
+  z-index: 5;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  display: table;
+  margin: auto;
+  padding: 0 10px;
+  color: #222222;
+  font-size: 170%;
+  font-weight: bold;
+
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.tags {
+  position: absolute;
+  bottom: 10%;
+  left: 0%;
+  width:100%;
+  margin: auto;
+  padding: 0 2%;
+  text-align: center;
+  z-index: 1;
+}
+
+.tag {
+  margin: 1px 1px;
+  background: #222;
+  padding: 0px 5px;
+  border-radius: 2px;
+  font-size: 92%;
+  display: inline-block;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s 0s;
+}
+
+
+.cardCont:hover .tag {
+  height: 24.3px;
+  transition: height 0.5s 0.5s;
+}
+
+.extLinks {
+  display: table;
+  margin: auto;
+}
+
+.extLinks > div {
+  float: left;
+  margin: 0 6px;
+}
+
+
+.subBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 0;
+  border-radius: 3px;
+  border: 0 solid black;
+  background: #763626;
+  color: #FFFFCB;
+}
+
+.subBtn:hover {
+  cursor: pointer;
+}
+
+.cardCont a {
+  color: #EDEAE3;
+}
