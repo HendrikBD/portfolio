@@ -31,7 +31,11 @@ router.get('/simon', function(req, res){
 })
 
 router.get("/index.php", function(req,res){
-  res.redirect("/");
+  //res.redirect("/");
+  if(req.query.name){
+    console.log("Send an email bro!")
+  }
+  res.render("reload");
 })
 
 module.exports = router;
