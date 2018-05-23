@@ -14,18 +14,20 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/index.php", function(req, res){
   
-  var name = req.query.name,
-    email = req.query.email,
-    phone = req.query.phone,
-    message = req.query.message;
+  if(req.query.name){
+    var name = req.query.name,
+      email = req.query.email,
+      phone = req.query.phone,
+      message = req.query.message;
  
-  var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
+    var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
 
   //console.log(req.query);
   //console.log(msg);
   
-  exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.body.name + "' benjamin.danen@gmail.com");
+    exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.query.name + "' benjamin.danen@gmail.com");
 
+  }
   res.render("reload");
 })
 
