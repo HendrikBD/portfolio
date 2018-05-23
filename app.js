@@ -14,13 +14,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 app.use('/', indexRoutes);
 
-app.post("/email", function(req, res){
+app.get("/email", function(req, res){
  
   var msg = "Message received from contact me form: \n  Name: " + req.body.name + "\n  Email: " + req.body.email + "\n  Phone Number: " + req.body.phone + "\n  Message: " + req.body.message;
   
   exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.body.name + "' benjamin.danen@gmail.com");
 
-  res.redirect("/");
+  res.render("reload");
 })
 
 app.listen(3000, function(){
