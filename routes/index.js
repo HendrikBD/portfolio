@@ -1,6 +1,8 @@
 var express = require("express"),
   router = express.Router();
 
+var exec = require("child_process").exec;
+
 router.get('/', function(req,res){
   res.render("portfolio")
 })
