@@ -15,8 +15,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use('/', indexRoutes);
 
 app.get("/email", function(req, res){
+
+  var name = req.query.name,
+    email = req.query.email,
+    phone = req.query.phone,
+    message = req.query.message;
  
-  var msg = "Message received from contact me form: \n  Name: " + req.body.name + "\n  Email: " + req.body.email + "\n  Phone Number: " + req.body.phone + "\n  Message: " + req.body.message;
+  var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
+
+  //console.log(req.query);
+  //console.log(msg);
   
   exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.body.name + "' benjamin.danen@gmail.com");
 
