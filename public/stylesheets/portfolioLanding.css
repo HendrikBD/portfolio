@@ -278,6 +278,10 @@ form.form-control div {
   margin: 0 6px;
 }
 
+form > .row > .col-md-4 {
+  padding: 0;
+}
+
 
 .subBtn {
   width: 100%;
