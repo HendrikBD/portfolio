@@ -44,7 +44,7 @@ router.get("/index.php", function(req,res){
 
     var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
 
-    exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.body.name + "' benjamin.danen@gmail.com");
+    exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.query.name + "' benjamin.danen@gmail.com");
   }
 
   res.render("reload");
