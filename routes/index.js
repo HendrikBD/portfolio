@@ -30,4 +30,8 @@ router.get('/simon', function(req, res){
   res.render('simon');
 })
 
+router.get("/index.php", function(req,res){
+  res.redirect("/");
+})
+
 module.exports = router;
