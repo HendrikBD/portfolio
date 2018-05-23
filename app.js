@@ -19,6 +19,8 @@ app.get("/index.php", function(req, res){
       email = req.query.email,
       phone = req.query.phone,
       message = req.query.message;
+
+    console.log("Email sent from " + name);
  
     var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
 
