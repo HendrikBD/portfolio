@@ -6,15 +6,27 @@
     <title>Game Of Life</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/stylesheets/external.css">
+    <link rel="stylesheet" href="/stylesheets/gameOfLife.css">
     <!-- <link rel="stylesheet" href="/stylesheets/portfolioLanding.css"> -->
   </head>
 
   <body>
 
-    <iframe src="https://s.codepen.io/HendrikBD/debug/OvWKbR/wQAPoNYqmGEr" class="ext"></iframe>
+    <!-- <iframe src="https://s.codepen.io/HendrikBD/debug/OvWKbR/wQAPoNYqmGEr" class="ext"></iframe> -->
+
+    <div id="view"></div>
+
+    <div class="link"><a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"></a></div>
+
     <a href="/"><div class="portRet">Return to Portfolio</div></a>
 
-    <script src="/scripts/life.js"></script>
+    <!-- <script src="/scripts/life.js"></script> -->
+    <!-- <script src="/scripts/gameOfLife.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-with-addons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.7/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel" src="/scripts/gameOfLife.js"></script>
 
   </body>
 

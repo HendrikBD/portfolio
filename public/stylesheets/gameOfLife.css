@@ -1,0 +1,112 @@
+body {
+  background: #999;
+}
+
+#view {
+  display: table;
+  margin: 40px auto;
+}
+
+div.board {
+  display: table;
+  background: #444;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.generation {
+  display:table;
+  float: right;
+  padding: 5px;
+  border-radius: 3px;
+  margin-right: 10px;
+  background: #668;
+}
+
+.grid {
+  margin: 40px 10px 0 10px;
+  display: grid;
+  grid-gap: 1px;
+}
+
+.small {
+  grid-template-columns: repeat(50, 12px);
+}
+
+.medium {
+  grid-template-columns: repeat(70, 12px);
+}
+
+.large {
+  grid-template-columns: repeat(100, 12px);
+}
+
+.cell {
+  width: 12px;
+  height: 12px;
+}
+
+.baby {
+  background: #9d9;
+}
+
+.live {
+  background: #383;
+}
+
+.dead {
+  background: #111;
+}
+
+.controls {
+  margin: 15px 0 10px 0;
+}
+
+.controls >div {
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.play {
+  background: #393;
+  float: left;
+}
+
+.clear {
+  background: #399;
+  float: left;
+}
+
+.random {
+  background: #933;
+  float: left;
+}
+
+
+.size {
+  float: right;
+  background: #477;
+}
+
+.size.active {
+  background: #8bb;
+}
+
+.link {
+  margin: 40px auto 30px auto;
+  text-align: center;
+  display: block;
+  font-size: 140%;
+}
+
+.link a {
+  text-decoration-line: underline;
+  /*   color: #0859BF; */
+  /*   color: #0000ee; */
+}
+
+                                                                                      .link a:hover {
+                                                                                          cursor: pointer;
+                                                                                        }
