@@ -239,6 +239,10 @@ form.form-control div {
   transition: opacity 0.5s;
 }
 
+.cardCont:nth-child(5) .portTitle {
+  font-size: 140%;
+}
+
 .tags {
   position: absolute;
   bottom: 10%;
