@@ -97,11 +97,15 @@ body {
   z-index: 2;
 }
 
+#menu > div {
+  position: relative;
+  top: 42px;
+}
+
 .title {
   text-align: center;
   font-size: 55px;
   font-weight: bold;
-  padding-top: 50px;
 }
 
 
@@ -202,7 +206,8 @@ body {
 div.onText {
   text-align: center;
   font-size: 12px;
-  margin-top: 3px;
+  width: 50%;
+  margin: 3px auto;
 }
 
 .disp.off >div >div{
