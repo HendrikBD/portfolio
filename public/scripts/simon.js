@@ -37,6 +37,12 @@ $(".onSwitch").on("click", function(){
     $(".strict div:nth-child(1)").css("background", "#555");
     $(".disp div div").html("")
     $(".onSwitch div").css("float", "left");
+
+    if(currAudio){
+      currAudio.currentTime=0;
+      currAudio.pause();
+    }
+    turnOffColor("all");
   }
 });
 
@@ -190,6 +196,11 @@ function turnOffColor(col){
     case "blue":
       $(".blue").css("background","#00b")
       break;
+    case "all":
+      $(".green").css("background","#080")
+      $(".red").css("background","#b00")
+      $(".blue").css("background","#00b")
+      $(".yellow").css("background","#aa0")
   }
   if(on && count<colors.length){
 
