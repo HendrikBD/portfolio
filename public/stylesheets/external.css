@@ -8,11 +8,11 @@
 }
 
 .portRet {
-  position: absolute;
+  position: fixed;
   bottom: 3%;
   right: 3%;
   padding: 10px;
-  border: 2px solid #111;
+  border: 1px solid #2A3132;
   border-radius: 15px;
   background: #336B87;
   color: #EDEAE3;
