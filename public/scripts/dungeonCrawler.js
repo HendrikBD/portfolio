@@ -62,9 +62,6 @@ function makeDungeons(){
   ];
   lvl4.enemies= [];
 
-
-
-
 }
 
 function newDungeon(){
@@ -599,77 +596,77 @@ class Dungeon extends React.Component {
 
   renderLevel(player){
     var grid = this.props.grid, level = [];
-          var corners = [[-1,-1], [-1,-1]];
+    var corners = [[-1,-1], [-1,-1]];
+
+    player = this.props.root.state.loc;
+
+    if(grid.length>=24){
+      if(player[0]-12>-1 && player[0]+12<grid.length){
+        corners[0][0] = player[0]-11;
+        corners[1][0] = player[0]+12;
+      } else if (player[0]+12<grid.length) {
+        corners[0][0] = 0;
+        corners[1][0] = 23;
+      } else if (player[0]-12>-1){
+        corners[0][0] = grid.length-24;
+        corners[1][0] = grid.length-1;
+      }
+    } else {
+      corners[0][0] = 0;
+      corners[1][0] = grid.length;
+    }
+
+
+    if(grid[0].length>=38){
+      if(player[1]-19>-1 && player[1]+19<grid[0].length){
+        corners[0][1] = player[1]-19;
+        corners[1][1] = player[1]+19;
+      } else if (player[1]+19<grid[0].length) {
+        corners[0][1] = 0;
+        corners[1][1] = 38;
+      } else if (player[1]-19>-1){
+        corners[0][1] = grid[0].length-39;
+        corners[1][1] = grid[0].length-1;
+      }
+    } else {
+      corners[0][1] = 0;
+      corners[1][1] = grid[0].length;
+    }
           
-          player = this.props.root.state.loc;
-          
-          if(grid.length>=24){
-                  if(player[0]-12>-1 && player[0]+12<grid.length){
-                            corners[0][0] = player[0]-12;
-                            corners[1][0] = player[0]+12;
-                          } else if (player[0]+12<grid.length) {
-                                    corners[0][0] = 0;
-                                    corners[1][0] = 23;
-                                  } else if (player[0]-12>-1){
-                                            corners[0][0] = grid.length-24;
-                                            corners[1][0] = grid.length-1;
-                                          }
-                } else {
-                        corners[0][0] = 0;
-                        corners[1][0] = grid.length;
-                      }
-          
-          
-          if(grid[0].length>=38){
-                  if(player[1]-19>-1 && player[1]+19<grid[0].length){
-                            corners[0][1] = player[1]-19;
-                            corners[1][1] = player[1]+19;
-                          } else if (player[1]+19<grid[0].length) {
-                                    corners[0][1] = 0;
-                                    corners[1][1] = 38;
-                                  } else if (player[1]-19>-1){
-                                            corners[0][1] = grid[0].length-39;
-                                            corners[1][1] = grid[0].length-1;
-                                          }
-                } else {
-                        corners[0][1] = 0;
-                        corners[1][1] = grid[0].length;
-                      }
-          
-          var location = this.props.root.state.loc, diffy, diffx, classNames;
-          
-          for(var i=corners[0][0]; i<corners[1][0]; i++){
-                  diffy=Math.abs(i-location[0]);
-                  for(var j=corners[0][1]; j<corners[1][1]; j++){
-                            diffx=Math.abs(j-location[1]);
-                            classNames= tiles[grid[i][j]];
-                            
-                            if((diffx>3 || diffy>3) && (diffx>4 || diffy>2) && (diffx>2 || diffy>4)){
-                                        classNames += ", fog"
-                                      }
-                            
-                            level.push(
-                                        <div
-                                          className={classNames}
-                                          key={i*grid[0].length+j}
-                                        >
-                                        </div>
-                                          );
-                          }
-                }
-          
-          return level
+    var location = this.props.root.state.loc, diffy, diffx, classNames;
+
+    for(var i=corners[0][0]; i<corners[1][0]; i++){
+      diffy=Math.abs(i-location[0]);
+      for(var j=corners[0][1]; j<corners[1][1]; j++){
+        diffx=Math.abs(j-location[1]);
+        classNames= tiles[grid[i][j]];
+
+        if((diffx>3 || diffy>3) && (diffx>4 || diffy>2) && (diffx>2 || diffy>4)){
+          classNames += ", fog"
         }
-    
-    render(){
-          
-          return (
-                  <div className="dungeon">
-                    {this.renderLevel(this.props.player)}
-                  </div>
-                )
-        }
-    
+
+        level.push(
+          <div
+          className={classNames}
+          key={i*grid[0].length+j}
+          >
+          </div>
+        );
+      }
+    }
+
+    return level
+  }
+
+  render(){
+
+    return (
+      <div className="dungeon">
+      {this.renderLevel(this.props.player)}
+      </div>
+    )
+  }
+
 }
 
 
