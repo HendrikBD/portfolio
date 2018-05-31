@@ -107,6 +107,10 @@ div.board {
   /*   color: #0000ee; */
 }
 
+.link a:hover {
+  cursor: pointer;
+}
+
                                                                                       .link a:hover {
                                                                                           cursor: pointer;
                                                                                         }
