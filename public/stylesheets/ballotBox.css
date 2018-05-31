@@ -1,0 +1,20 @@
+.ext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0 solid black;
+}
+
+.portRet {
+  position: absolute;
+  bottom: 6.5%;
+  right: 1%;
+  padding: 10px;
+  border: 2px solid #111;
+  border-radius: 15px;
+  background: #336B87;
+  color: #EDEAE3;
+}
+
