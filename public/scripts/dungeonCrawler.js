@@ -517,7 +517,7 @@ class Dungeon extends React.Component {
   componentDidMount(){
     var self=this;
     var cols = (this.props.grid[0].length<38) ? this.props.grid[0].length : 38;
-    $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",30px)")
+    $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",3vh)")
 
     $("body").keypress(function(key){self.handleKey(key.originalEvent.keyCode)})
   }
@@ -568,7 +568,7 @@ class Dungeon extends React.Component {
         })
 
         var cols = (this.props.grid[0].length<38) ? this.props.grid[0].length : 38;
-        $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",30px)")
+        $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",3vh)")
         break;
 
       default:
