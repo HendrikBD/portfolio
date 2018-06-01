@@ -10,11 +10,10 @@ body {
 
 .root {
   display:grid;
-  grid-template-columns: 300px 60.8vw;
+  grid-template-columns: 30vw 60.8vw;
 }
 
 .status {
-  /*   background: #555; */
   background: #877d72;
 }
 
@@ -68,7 +67,7 @@ body {
 
 .bar {
   height: 30px;
-  width: 250px;
+  width: 27vw;
   margin: 10px auto;
   border: 2px solid black;
   border-radius: 3px;
@@ -176,14 +175,16 @@ div.fog {
   display: grid;
   grid-template-columns:25px 1fr;
 
-  font-size: 130%;
+  font-size: 110%;
   background: #9f8971;
   padding: 10px;
-  width: 230px;
-  margin: 50px auto;
+  width: 25vw;
+  /* max-width: 350px; */
+  margin: 2vh auto;
 
   border: 3px solid black;
   border-radius: 6px;
+
 }
 
 .legend div:nth-child(odd) {
