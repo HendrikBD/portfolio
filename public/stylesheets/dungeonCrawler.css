@@ -3,15 +3,14 @@ body {
 }
 
 #screen {
-  /*   background: #111; */
-  width: 1500px;
   margin: 50px auto 0 auto;
   overflow: hidden;
+  display: table;
 }
 
 .root {
   display:grid;
-  grid-template-columns: 300px 1200px;
+  grid-template-columns: 300px 60.8vw;
 }
 
 .status {
@@ -24,8 +23,8 @@ body {
 }
 
 .dungeon > div {
-  width: 3vh;
-  height: 3vh;
+  width: 1.6vw;
+  height: 1.6vw;
 }
 
 .wall {
