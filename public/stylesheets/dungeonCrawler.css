@@ -15,6 +15,7 @@ body {
 
 .status {
   background: #877d72;
+  max-height: 36.8vw;
 }
 
 .dungeon {
