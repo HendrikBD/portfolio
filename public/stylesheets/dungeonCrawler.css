@@ -121,6 +121,7 @@ body {
   font-size: 6vw;
   transition: margin 2s;
   background: #111;
+  z-index: 10;
 }
 
 .win .text {
@@ -161,7 +162,7 @@ body {
   background: green;
   border: 2px solid black;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 1.5vw;
   margin: 15px auto;
   display: table;
   padding: 3px 10px;

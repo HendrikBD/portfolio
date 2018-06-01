@@ -321,7 +321,7 @@ class Root extends React.Component {
     freeze = false;
 
     var cols = (lvl1.grid[0].length<38) ? lvl1.grid[0].length : 38;
-    $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",30px)")
+    $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",1.6vw)")
 
     $(".message .text")[0].innerText = "";
     $(".message .button")[0].innerText = "";
