@@ -32,22 +32,4 @@ router.get('/simon', function(req, res){
   res.render('simon');
 })
 
-// router.get("/index.php", function(req,res){
-//   //res.redirect("/");
-//   if(req.query.name){
-//     console.log("Send an email bro!")
-//
-//     var name = req.query.name,
-//       email = req.query.email,
-//       phone = req.query.phone,
-//       message = req.query.message;
-//
-//     var msg = "Message received from contact me form: \n  Name: " + name + "\n  Email: " +email + "\n  Phone Number: " + phone + "\n  Message: " + message;
-//
-//     exec("echo '" + msg + "' | mail -s 'Portfolio Query from " + req.query.name + "' benjamin.danen@gmail.com");
-//   }
-//
-//   res.render("reload");
-// })
-
 module.exports = router;
