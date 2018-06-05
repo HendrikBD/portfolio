@@ -265,7 +265,6 @@ class Root extends React.Component {
   }
 
   levelUp(){
-    console.log("Level up!")
 
     this.state.player.level ++;
     this.state.player.dmg = baseStats.dmgLvl[this.state.player.level-1] + baseStats.dmgWeapon[this.state.player.weapon];
@@ -275,11 +274,9 @@ class Root extends React.Component {
       this.state.player.hp  = baseStats.hp[this.state.player.level-1];
     }
 
-    console.log(this)
   }
 
   newLevel(){
-    console.log(this);
   }
 
   defeatBoss(){
@@ -362,7 +359,6 @@ class Root extends React.Component {
     $(".message .text")[0].innerText = "Game Over";
     $(".message .button")[0].innerText = "Play Again";
     $(".message")[0].classList.add("gameOver");
-    console.log(this)
 
     $(".message .button").on("click", function(){
       self.restart(self);
@@ -377,7 +373,6 @@ class Root extends React.Component {
     $(".message .text")[0].innerText = "You Killed the Beastie";
     $(".message .button")[0].innerText = "Play Again";
     $(".message")[0].classList.add("win");
-    console.log(this)
 
     $(".message .button").on("click", function(){
       self.restart(self);
@@ -431,10 +426,8 @@ class Root extends React.Component {
         }
         break;
       case 4:
-        console.log(this)
         this.player.weapon++;
         this.player.dmg = baseStats.dmgLvl[this.player.level-1] + baseStats.dmgWeapon[this.player.weapon];
-        console.log(this)
         proceed=true;
         break;
       case 6:
@@ -452,7 +445,6 @@ class Root extends React.Component {
             this.player.hp = 0;
             this.root.gameOver();
           }
-          console.log(this.player.hp)
         }
         this.root.updateStatus(this)
         break;
@@ -519,7 +511,9 @@ class Dungeon extends React.Component {
     var cols = (this.props.grid[0].length<38) ? this.props.grid[0].length : 38;
     $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",1.6vw)")
 
-    $("body").keypress(function(key){self.handleKey(key.originalEvent.keyCode)})
+    document.onkeydown = function(event){
+      self.handleKey(event.keyCode);
+    };
   }
 
   handleKey(code){

@@ -108,8 +108,6 @@ $(".btn").on("mousedown", function(){
 
   if(!play && on){
 
-
-
     if(currAudio && currAudio.attributes.src==audio[this.classList[1]].attributes.src){
 
       currAudio.currentTime=0;
@@ -118,10 +116,6 @@ $(".btn").on("mousedown", function(){
       currAudio = audio[this.classList[1]];
       currAudio.play();
     }
-
-
-    setTimeout(function(){
-    }, 500)
 
     $("."+this.classList[1]).css("background",colorCode[this.classList[1]][1]);
   }
