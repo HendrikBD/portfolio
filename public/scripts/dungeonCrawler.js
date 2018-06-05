@@ -512,7 +512,12 @@ class Dungeon extends React.Component {
     $(".dungeon").css("grid-template-columns", "repeat(" + String(cols) + ",1.6vw)")
 
     document.onkeydown = function(event){
-      self.handleKey(event.keyCode);
+
+      var code = event.keyCode;
+      if(code >= 37 && code<=40){
+        self.handleKey(code);
+      }
+
     };
   }
 
