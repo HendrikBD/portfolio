@@ -6,7 +6,7 @@ var sys = require("util"),
   exec = require("child_process").exec;
 
 var indexRoutes = require('./routes/index');
-var indexRoutes = require('./routes/hopper');
+var hopperRoutes= require('./routes/hopper');
 
 app.set('view engine', 'ejs');
 
@@ -33,6 +33,7 @@ app.get('/emailRedirect', function(req, res){
 })
 
 app.use('/', indexRoutes);
+app.use('/hopper', hopperRoutes);
 
 // app.get("/email", function(req, res){
 //
