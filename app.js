@@ -6,6 +6,7 @@ var sys = require("util"),
   exec = require("child_process").exec;
 
 var indexRoutes = require('./routes/index');
+var indexRoutes = require('./routes/hopper');
 
 app.set('view engine', 'ejs');
 
