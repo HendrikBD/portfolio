@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#349C54">
+
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+    <link rel="stylesheet" href="/stylesheets/hopper.css">
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Weather PWA">
+    <link rel="apple-touch-icon" href="img/icon-192.png">
+
+    <title>Hopper</title>
+  </head>
+
+  <body>
+
+    <div class="navbar">
+        <div class="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      <div class="brand"><img src="img/hopperIcon.png">Hopper</div>
+      <div class="spacing"></div>
+      <div class="refresh">
+              <img src="img/refresh.png">
+              <img src="img/new.png">
+      </div>
+
+    </div>
+
+    <div class="content">
+
+      <div class="sidebar">
+
+        <div class="header">
+          <div>
+                  <div class="title"><img src="img/hopperIcon.png">Hopper</div>
+                  <div class="desc">An RSS feed reader</div>
+          </div>
+          <div class="back"><img src="img/backArrow.svg"></div>
+        </div>
+
+        <div class="body">
+
+          <div class="filters container">
+                  <div class="filter home"><div class='btn'><img src="img/home.png"><p>Home</p></div></div>
+                  <div class="filter new"><div><img src="img/plus.png"></div><div class="newFilter"><div><input type="text" placeholder="RSS URL"></input></div><div class="newRssSubmit">Add</div></div></div>
+          </div>
+
+
+          <div class="optSpace">
+                  <div class="btns"> <div class="horSpacing"></div>
+                          <div class="rss"><img src="img/rss.png" class="btn"></div>
+                          <div class="edit"><img src="img/edit.png" class="btn"></div>
+                  </div>
+                  <div class="container options"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="main">
+              <div class="msg">
+                      <div class='loading hide'></div>
+              </div>
+              <div class="feed">
+              </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="/scripts/hopper.js"></script>
+  </body>
+</html>
