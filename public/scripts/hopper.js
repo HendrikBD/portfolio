@@ -122,7 +122,7 @@
   // be returned.
   app.getFeeds = function(checkPubTime, returnFeeds){
     if(app.reqUrls.length>0) {
-      let path = "/rss?url=";
+      let path = "/hopper/rss?url=";
       let uniqueUrls = [];
       var newestPub = app.getMostRecent();
 
@@ -161,7 +161,6 @@
               document.querySelector(".refresh img:nth-child(2)").classList.remove("on");
 
             } else if(response.newPub){
-
               clearInterval(app.periodicCheck)
               app.periodicCheck = undefined;
 
@@ -185,7 +184,7 @@
       request.open('GET', path);
       request.send();
       request.onerror = function(err){
-        caches.match("/rss").then(function(response){
+        caches.match("/hopper/rss").then(function(response){
           if(response){
             response.json().then(function(json){
               app.feeds = json;

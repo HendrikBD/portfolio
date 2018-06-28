@@ -45,7 +45,7 @@ self.addEventListener('activate', function(e){
 
 
 self.addEventListener('fetch', function(e){
-  var dataUrl = "http://localhost:3000/rss";
+  var dataUrl = "http://localhost:3000/hopper/rss";
   var reqUrl = e.request.url.split("?")[0];
   // console.log("[ServiceWorker] Fetching: ", reqUrl);
   if(reqUrl.indexOf(dataUrl) > -1) {
@@ -53,7 +53,7 @@ self.addEventListener('fetch', function(e){
     fetch(e.request).then(function(response){
       if(response.ok){
         caches.open(dataCacheName).then(function(cache){
-          cache.put("/rss", response.clone());
+          cache.put("/hopper/rss", response.clone());
         })
         return response;
       }
