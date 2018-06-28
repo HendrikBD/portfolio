@@ -1,4 +1,4 @@
-var cacheName = "hopperCache_0.2.00";
+var cacheName = "hopperCache_0.2.02";
 var dataCacheName = "feedData";
 var filesToCache = [
   '/',
@@ -23,7 +23,9 @@ self.addEventListener('install', function(e){
     caches.open(cacheName).then(function(cache) {
       console.log("[ServiceWorker] Caching app shell");
       return cache.addAll(filesToCache);
-    }).catch(function(err){
+    }).then(function(){
+      self.skipWaiting()
+    }) .catch(function(err){
       console.log("[ServiceWorker] Error during caching: "+ err)
     }
     )
