@@ -15,7 +15,6 @@ var filesToCache = [
   '/img/plus.png',
   '/img/refresh.png',
   '/img/rss.png',
-  '/img/rssFeed.png',
 ];
 
 self.addEventListener('install', function(e){
@@ -24,7 +23,10 @@ self.addEventListener('install', function(e){
     caches.open(cacheName).then(function(cache) {
       console.log("[ServiceWorker] Caching app shell");
       return cache.addAll(filesToCache);
-    })
+    }).catch(function(err){
+      console.log("[ServiceWorker] Error during caching: "+ err)
+    }
+    )
   )
 })
 
