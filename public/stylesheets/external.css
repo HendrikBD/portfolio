@@ -11,9 +11,9 @@
   position: fixed;
   bottom: 3%;
   right: 3%;
-  padding: 10px;
-  border: 1px solid #2A3132;
-  border-radius: 15px;
+  padding: 8px 10px;
+  border: 2.5px solid #2A3132;
+  border-radius: 4px;
   background: #336B87;
   color: #EDEAE3;
   /* cursor: pointer; */
