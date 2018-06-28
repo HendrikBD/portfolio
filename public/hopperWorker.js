@@ -1,7 +1,7 @@
 var cacheName = "hopperCache_0.2.02";
 var dataCacheName = "feedData";
 var filesToCache = [
-  '/',
+  '/hopper',
   '/hopper.html',
   '/scripts/hopper.js',
   '/stylesheets/hopper.css',
@@ -72,7 +72,7 @@ self.addEventListener('fetch', function(e){
           var fetchPromise = fetch(e.request).then(function(networkResponse){
             cache.put(e.request, networkResponse.clone());
             return networkResponse;
-          })
+          }).catch(function(err){console.log(err)})
           return response || fetchPromise
         })
       })
