@@ -49,8 +49,21 @@ router.get('/rss', function(req, res){
   Promise.all(urlParse)
     .then(function(){
       let response = {};
+	  let itemProps = ["title", "link","pubDate"];
 
       feedsParsed.forEach(function(feed){
+
+		if(feed.item){
+			feed.item.forEach(function(item){
+				if(item){
+					Object.keys(item).forEach(function(ind){
+						if(itemProps.indexOf(ind)<0){
+							delete item[ind]
+						}
+					})
+				}
+			})
+		}
 
         if(feed.link.slice(-1)=="/"){
           feed.link = feed.link.slice(0,-1);
@@ -93,7 +106,7 @@ router.get('/rss', function(req, res){
       console.log("Error parsing rss feed: ", err)
       res.status(204).end();
     });
-})
+ })
 
 function prepIndex(){
   ejs.renderFile('views/hopper.ejs', function(err, str){
